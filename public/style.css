@@ -1,0 +1,138 @@
+:root{
+    --elementBorder: 5px solid purple
+}
+
+body{
+    display: flex;
+    margin: 0;
+    font-size: larger;
+    height: 100vh;
+}
+
+.Menu{
+    width: 15vw;
+    border: var(--elementBorder);
+    padding: 3px;
+    margin-right: 5px;
+    display: flex;
+    flex-flow: column;
+}
+
+.Selection{
+    border: var(--elementBorder);
+    margin: 5px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+.Selection__Selector{
+    font-size: x-large;
+    margin: 10px;
+}
+
+.Selection__Selector:hover{
+    color: red;
+}
+
+.Shopcart{
+    border: var(--elementBorder);
+    margin: 5px;
+    padding: 3px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.Shopcart__Title{
+    margin: 10px;
+    font-size: 40px;
+}
+
+.Shopcart__List-Titles{
+    margin: 10px;
+    display: flex;
+    width: 100%;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.Shopcart__Name-Title{
+    float: left;
+    margin: 10px;
+}
+
+.Shopcart__Quantity-Title{
+    float: right;
+    margin: 10px;
+}
+
+.Shopcart__List{
+    margin: 10px;
+}
+
+.Shopcart__Total-Count{
+    margin: 10px;
+}
+
+.Shopcart__Checkout-Button{
+    margin: 10px;
+}
+
+.FoodList{
+    width: 85vw;
+    border: var(--elementBorder);
+    padding: 3px;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.Food{
+    border: var(--elementBorder);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 5px;
+    /* width: 160px;
+    height: 320px; */
+    width: 15%;
+    margin-bottom: 1vh;
+    /* height: 40%; */
+}
+
+.Food__Image{
+    margin: 10px;
+    width: 100%;
+}
+
+.Food__Name{
+    margin: 10px;
+}
+
+.Food__Price{
+    margin: 10px;
+}
+
+.Food__Manage-Quantity{
+    margin: 10px;
+    display: flex;
+}
+
+.Food__Increase-Quantity{
+    margin: 10px;
+}
+
+.Food__Quatity{
+    margin: 10px;
+}
+
+.Food__Decrease-Quantity{
+    margin: 10px;
+}
+
+.Food__Add-To-Shopcart-Button{
+    margin: 10px;
+}
