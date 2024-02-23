@@ -1,17 +1,21 @@
 <div class="FoodList">
     <% if (Menu) { %>
         <% Menu.forEach((food) => { %>
-            <% if(food.category != Category) return; %>
+            <% if (Category != 'any') {%>
+                <% if(food.category != Category) return; %>
+            <% }%>
             <div class="Food">
                 <img src="<%= food.image %>" alt="<%= food.name %>" class="Food__Image">
                 <p class="Food__Name"><%= food.name %></p>
-                <p class="Food__Price"><%= food.price %> руб.</p>
+                <p class="Food__Description"><%= food.description %></p>
+                <p class="Food__Price">Цена: <%= food.price %> руб.</p>
+                <p class="Food__Quantity-Title">Количество</p>
                 <div class="Food__Manage-Quantity">
                     <button class="Food__Decrease-Quantity">-</button>
-                    <p class="Food__Quatity">0</p>
+                    <p class="Food__Quantity">1</p>
                     <button class="Food__Increase-Quantity">+</button>
                 </div>
-                <button class="Food__Add-To-Shopcart-Button">Добавить в коризну</button>
+                <button class="Food__Add-To-Shopcart-Button">В КОРЗИНУ</button>
             </div>
         <% }) %>
     <% } %>

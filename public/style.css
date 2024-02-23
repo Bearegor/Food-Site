@@ -7,11 +7,13 @@ body{
     margin: 0;
     font-size: larger;
     height: 100vh;
+    background-color: rgb(243, 242, 242);
 }
+
 
 .Menu{
     width: 15vw;
-    border: var(--elementBorder);
+    /* border: var(--elementBorder); */
     padding: 3px;
     margin-right: 5px;
     display: flex;
@@ -19,12 +21,14 @@ body{
 }
 
 .Selection{
-    border: var(--elementBorder);
+    border: 5px black ridge;
+    border-radius: 10px;
     margin: 5px;
     padding: 3px;
     display: flex;
     align-items: center;
     flex-flow: column;
+    background-color: white;
 }
 
 .Selection__Selector{
@@ -32,22 +36,37 @@ body{
     margin: 10px;
 }
 
-.Selection__Selector:hover{
+.Selection__Selector a{
+    text-decoration: none;
+    color: black;
+}
+
+.Selection__Selector a:hover{
     color: red;
 }
 
 .Shopcart{
-    border: var(--elementBorder);
+    /* border: var(--elementBorder); */
+    border-radius: 10px;
     margin: 5px;
     padding: 3px;
     display: flex;
     flex-flow: column;
     align-items: center;
+    background-color: rgb(255, 238, 0);
+    color: rgb(97, 97, 97);
+    font-weight: bold;
 }
 
 .Shopcart__Title{
+    color: white;
     margin: 10px;
+    padding: 5px;
     font-size: 40px;
+    background-color: rgb(255, 217, 0);
+    width: 90%;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .Shopcart__List-Titles{
@@ -78,61 +97,107 @@ body{
 
 .Shopcart__Checkout-Button{
     margin: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: gray;
+    color: white;
+    border-radius: 5px;
+}
+
+.Shopcart__Checkout-Button:active{
+    background-color: rgb(160, 160, 160);
 }
 
 .FoodList{
     width: 85vw;
-    border: var(--elementBorder);
+    /* border: var(--elementBorder); */
     padding: 3px;
     justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
-    
 }
 
 .Food{
-    border: var(--elementBorder);
+    /* border: var(--elementBorder); */
     display: flex;
     flex-flow: column;
     align-items: center;
     padding: 5px;
-    /* width: 160px;
-    height: 320px; */
-    width: 15%;
+    width: 17%;
     margin-bottom: 1vh;
-    /* height: 40%; */
 }
 
 .Food__Image{
     margin: 10px;
-    width: 100%;
+    object-fit: contain;
+    width: 80%;
+    height: 80%;
+    /* position: relative; */
+    border: 10px rgb(255, 217, 0) solid;
+    border-radius: 50%;
+    background-color: white;
 }
 
 .Food__Name{
     margin: 10px;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    min-height: 5vh;
+}
+
+.Food__Description{
+    width: 100%;
+    min-height: 7vh;
+    margin: 0;
+    border-top: 2px black solid;
+    border-bottom: 2px black solid;
+    color: rgb(25, 151, 255);
+    text-decoration: underline;
 }
 
 .Food__Price{
-    margin: 10px;
+    margin: 5px;
+    color: rgb(252, 104, 78);
+    font-weight: bold;
 }
 
 .Food__Manage-Quantity{
-    margin: 10px;
+    margin: 5px;
     display: flex;
 }
 
-.Food__Increase-Quantity{
-    margin: 10px;
+.Food__Quantity-Title{
+    margin: 5px;
 }
 
-.Food__Quatity{
-    margin: 10px;
+.Food__Increase-Quantity, .Food__Decrease-Quantity{
+    margin: 5px;
+    /* border-radius: 50%; */
+    background-color: lightgray;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
 }
 
-.Food__Decrease-Quantity{
-    margin: 10px;
+.Food__Increase-Quantity:active, .Food__Decrease-Quantity:active{
+    background-color: gray;
+}
+
+.Food__Quantity{
+    margin: 5px;
 }
 
 .Food__Add-To-Shopcart-Button{
-    margin: 10px;
+    margin: 5px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: rgb(255, 217, 0);
+    color: white;
+    border-radius: 5px;
+}
+
+.Food__Add-To-Shopcart-Button:active{
+    background-color: rgb(238, 202, 0);
 }

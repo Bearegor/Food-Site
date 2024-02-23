@@ -1,6 +1,4 @@
 import fs from 'node:fs'
-import resolve from 'node:path'
-import readFile from 'node:fs/promises'
 import express from 'express'
 import ejs from 'ejs'
 
@@ -12,7 +10,7 @@ app.use(express.static('public'));
 function GetData(){
   const Data = JSON.parse(fs.readFileSync('data.json'))
   const Menu = Data.menu
-  let Categories = new Set()
+  const Categories = new Set()
   Menu.forEach((element) => {
     Categories.add(element.category)
   })
@@ -25,7 +23,11 @@ function GetData(){
 const Menu = GetData()
 
 app.get('/', (req, res) => {
-    res.render('MainPage', {Menu: Menu})
+    res.render('MainPage', {Menu: Menu, Category: 'any'})
+})
+
+app.get('/:category', (req, res) => {
+  res.render('MainPage', {Menu: Menu, Category: req.params.category})
 })
 
 app.listen(port, () => {
