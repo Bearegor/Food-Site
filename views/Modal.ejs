@@ -1,0 +1,98 @@
+<div class="Modal">
+    <div class="Modal__Content">
+        <div class="Modal__Header">
+            <p class="Modal__Title">Проверьте и добавьте в корзину</p>
+            <Button class="Modal__Close-Btn">X</Button>
+        </div>
+        <div class="Modal__Navigation">
+            <p class="Modal__Page-Name">Размер</p>
+            <p class="Modal__Page-Name">Хлеб</p>
+            <p class="Modal__Page-Name">Овощи</p>
+            <p class="Modal__Page-Name">Соусы</p>
+            <p class="Modal__Page-Name">Начинка</p>
+            <p class="Modal__Page-Name">Готово!</p>
+        </div>
+        <div class="Modal__Menu">
+            <div class="Modal__Move">
+                <button class="Modal__Move-Left">Назад</button>
+                <button class="Modal__Move-Right">Вперёд</button>
+            </div>
+            <div class="Modal__Options">
+                <div class="Modal__Options-Sizes">
+                    <% Options.Sizes.forEach((option) => { %>
+                        <div class="Modal__Option">
+                            <img src="<%= option.image %>" alt="<%= option.name %>" class="Modal__Option-Image">
+                            <p class="Modal__Option-Name"><%= option.name %></p>
+                            <p class="Modal__Option-Price"><%= option.price %></p>   
+                        </div>
+                    <% }) %>
+                </div>
+                <div class="Modal__Options-Breads">
+                    <% Options.Breads.forEach((option) => { %>
+                        <div class="Modal__Option">
+                            <img src="<%= option.image %>" alt="<%= option.name %>" class="Modal__Option-Image">
+                            <p class="Modal__Option-Name"><%= option.name %></p>
+                            <p class="Modal__Option-Price"><%= option.price %></p>   
+                        </div>
+                    <% }) %>                   
+                </div>
+                <div class="Modal__Options-Vegies">
+                    <% Options.Vegies.forEach((option) => { %>
+                        <div class="Modal__Option">
+                            <img src="<%= option.image %>" alt="<%= option.name %>" class="Modal__Option-Image">
+                            <p class="Modal__Option-Name"><%= option.name %></p>
+                            <p class="Modal__Option-Price"><%= option.price %></p>   
+                        </div>
+                    <% }) %>                    
+                </div>
+                <div class="Modal__Options-Sauces">
+                    <% Options.Sauces.forEach((option) => { %>
+                        <div class="Modal__Option">
+                            <img src="<%= option.image %>" alt="<%= option.name %>" class="Modal__Option-Image">
+                            <p class="Modal__Option-Name"><%= option.name %></p>
+                            <p class="Modal__Option-Price"><%= option.price %></p>   
+                        </div>
+                    <% }) %>                    
+                </div>
+                <div class="Modal__Options-Fillings">
+                    <% Options.Fillings.forEach((option) => { %>
+                        <div class="Modal__Option">
+                            <img src="<%= option.image %>" alt="<%= option.name %>" class="Modal__Option-Image">
+                            <p class="Modal__Option-Name"><%= option.name %></p>
+                            <p class="Modal__Option-Price"><%= option.price %></p>   
+                        </div>
+                    <% }) %>                    
+                </div>
+                <div class="Modal__Options-Ready">
+                    <div class="Modal__Order">
+                        <div class="Modal__Order-Image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="Modal__Order-Description">
+                            <p class="Modal__Order-Title">Ваш сендвич готов!</p>
+                            <div class="Modal__Order-Details">
+                                <p class="Modal__Order-Size">Не выбрано</p>
+                                <p class="Modal__Order-Bread">Не выбрано</p>
+                                <p class="Modal__Order-Vegie">Не выбрано</p>
+                                <p class="Modal__Order-Sauce">Не выбрано</p>
+                                <p class="Modal__Order-Filling">Не выбрано</p>
+                            </div>
+                            <p class="Modal__Order-Name">Овощной</p>
+                        </div>
+                    </div>
+                    <div class="Modal__Manage-Order">
+                        <div class="Modal__Order-Quantity">
+                            <button class="Modal__Decrease-Quantity">-</button>
+                            <p class="Modal__Order-Quantity">1</p>
+                            <button class="Modal__Increase-Quantity">+</button>                            
+                        </div>
+                        <div class="Modal__Order-Checkout">
+                            <p class="Modal__Order-Price">110 руб.</p>
+                            <Button class="Modal__Options-Ready-Btn">В корзину</Button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
