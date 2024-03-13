@@ -8,7 +8,7 @@ function openModal(){
     const Ready = document.getElementsByClassName("Modal__Options-Ready")[0]
 
     Modal.style.display = "block"
-    Sizes.style.display = "block"
+    Sizes.style.display = "flex"
     Breads.style.display = "none"
     Vegies.style.display = "none"
     Sauces.style.display = "none"
@@ -43,13 +43,13 @@ function moveInModal(direction){
         case "right":
             if(CurrentOption + 1 < Options.length){
                 Options[CurrentOption].style.display = 'none'
-                Options[CurrentOption + 1].style.display = 'block'
+                Options[CurrentOption + 1].style.display = 'flex'
             }
             break;
         case "left":
             if(CurrentOption - 1 >= 0){
                 Options[CurrentOption].style.display = 'none'
-                Options[CurrentOption - 1].style.display = 'block'
+                Options[CurrentOption - 1].style.display = 'flex'
             }
             break;
     }

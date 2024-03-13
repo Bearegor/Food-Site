@@ -1,8 +1,8 @@
 <div class="Modal">
     <div class="Modal__Content">
         <div class="Modal__Header">
-            <p class="Modal__Title">Проверьте и добавьте в корзину</p>
             <Button class="Modal__Close-Btn">X</Button>
+            <p class="Modal__Title">Проверьте и добавьте в корзину</p>
         </div>
         <div class="Modal__Navigation">
             <p class="Modal__Page-Name">Размер</p>
@@ -23,7 +23,7 @@
                         <div class="Modal__Option">
                             <img src="<%= option.image %>" alt="<%= option.name %>" class="Modal__Option-Image">
                             <p class="Modal__Option-Name"><%= option.name %></p>
-                            <p class="Modal__Option-Price"><%= option.price %></p>   
+                            <p class="Modal__Option-Price">Цена: <%= option.price %> руб.</p>   
                         </div>
                     <% }) %>
                 </div>
@@ -32,7 +32,7 @@
                         <div class="Modal__Option">
                             <img src="<%= option.image %>" alt="<%= option.name %>" class="Modal__Option-Image">
                             <p class="Modal__Option-Name"><%= option.name %></p>
-                            <p class="Modal__Option-Price"><%= option.price %></p>   
+                            <p class="Modal__Option-Price">Цена: <%= option.price %> руб.</p>   
                         </div>
                     <% }) %>                   
                 </div>
@@ -41,7 +41,7 @@
                         <div class="Modal__Option">
                             <img src="<%= option.image %>" alt="<%= option.name %>" class="Modal__Option-Image">
                             <p class="Modal__Option-Name"><%= option.name %></p>
-                            <p class="Modal__Option-Price"><%= option.price %></p>   
+                            <p class="Modal__Option-Price">Цена: <%= option.price %> руб.</p>   
                         </div>
                     <% }) %>                    
                 </div>
@@ -50,7 +50,7 @@
                         <div class="Modal__Option">
                             <img src="<%= option.image %>" alt="<%= option.name %>" class="Modal__Option-Image">
                             <p class="Modal__Option-Name"><%= option.name %></p>
-                            <p class="Modal__Option-Price"><%= option.price %></p>   
+                            <p class="Modal__Option-Price">Цена: <%= option.price %> руб.</p>   
                         </div>
                     <% }) %>                    
                 </div>
@@ -59,23 +59,21 @@
                         <div class="Modal__Option">
                             <img src="<%= option.image %>" alt="<%= option.name %>" class="Modal__Option-Image">
                             <p class="Modal__Option-Name"><%= option.name %></p>
-                            <p class="Modal__Option-Price"><%= option.price %></p>   
+                            <p class="Modal__Option-Price">Цена: <%= option.price %> руб.</p>   
                         </div>
                     <% }) %>                    
                 </div>
                 <div class="Modal__Options-Ready">
                     <div class="Modal__Order">
-                        <div class="Modal__Order-Image">
-                            <img src="" alt="">
-                        </div>
+                        <img class="Modal__Order-Image" src="/i/sandwiches/ovoshnoy.png" alt="">
                         <div class="Modal__Order-Description">
                             <p class="Modal__Order-Title">Ваш сендвич готов!</p>
                             <div class="Modal__Order-Details">
-                                <p class="Modal__Order-Size">Не выбрано</p>
-                                <p class="Modal__Order-Bread">Не выбрано</p>
-                                <p class="Modal__Order-Vegie">Не выбрано</p>
-                                <p class="Modal__Order-Sauce">Не выбрано</p>
-                                <p class="Modal__Order-Filling">Не выбрано</p>
+                                <p class="Modal__Order-Size">Размер: Не выбрано</p>
+                                <p class="Modal__Order-Bread">Хлеб: Не выбрано</p>
+                                <p class="Modal__Order-Vegie">Овощи: Не выбрано</p>
+                                <p class="Modal__Order-Sauce">Соусы: Не выбрано</p>
+                                <p class="Modal__Order-Filling">Начинка: Не выбрано</p>
                             </div>
                             <p class="Modal__Order-Name">Овощной</p>
                         </div>
@@ -84,15 +82,18 @@
                         <div class="Modal__Order-Quantity">
                             <button class="Modal__Decrease-Quantity">-</button>
                             <p class="Modal__Order-Quantity">1</p>
+                            <!-- <input type="number" min="1" class="Modal__Order-Quantity"/> -->
                             <button class="Modal__Increase-Quantity">+</button>                            
                         </div>
                         <div class="Modal__Order-Checkout">
-                            <p class="Modal__Order-Price">110 руб.</p>
                             <Button class="Modal__Options-Ready-Btn">В корзину</Button>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="Modal__Price-Section">
+            <p class="Modal__Price">Итого: 100 руб.</p>
         </div>
     </div>
 </div>

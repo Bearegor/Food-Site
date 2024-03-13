@@ -97,6 +97,7 @@ body{
 
 .Shopcart__Checkout-Button{
     margin: 10px;
+    border: 2px rgb(100, 100, 100) solid;
     font-weight: bold;
     font-size: 20px;
     background-color: gray;

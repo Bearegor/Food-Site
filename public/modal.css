@@ -13,19 +13,55 @@
 
 .Modal__Content{
     border-radius: 3px;
-    background-color: white;
+    /* background-color: white; */
+    background-color: lightgray;
     margin: 10vh 20vw;
     width: 60%;
+}
+
+.Modal__Header{
+    background-color: rgb(255, 217, 0);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    display: flex;
+    justify-content: right;
+}
+
+.Modal__Title{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.Modal__Close-Btn{
+    position: fixed;
+    background-color: rgb(255, 217, 0);
+    border: none;
+    border-radius: 3px;
+    color: rgb(199, 169, 0);  
+    font-size: 20px;
 }
 
 .Modal__Navigation{
     display: flex;
     flex-flow: row;
-    justify-content: space-between;
+    border-radius: 5px;
+    justify-content: space-around;
+    background-color: white;
+    margin: 30px 30px 10px 30px;
+
 }
 
 .Modal__Page-Name{
-    margin: 10px;
+    margin: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    color: rgb(97, 97, 97);
 }
 
 .Modal__Menu{
@@ -41,13 +77,15 @@
 .Modal__Move-Left, 
 .Modal__Move-Right{
     margin: 10px 20px;
+    background: rgb(252, 104, 78);
+    color: white;
+    border: 2px rgb(226, 85, 60) solid;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: bold;
 }
 
 .Modal__Options{
-
-}
-
-.Modal__Option{
 
 }
 
@@ -57,8 +95,169 @@
 .Modal__Options-Sauces,
 .Modal__Options-Fillings{
     /* display: none; */
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Modal__Option{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: transparent;
+    /* border: 3px black solid; */
+    padding: 5px;
+    width: 25%;
+}
+
+.Modal__Option-Image{
+    margin: 10px;
+    object-fit: contain;
+    width: 80%;
+    height: 80%;
+    border: 10px rgb(255, 217, 0) solid;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.Modal__Option-Name{
+    width: 100%;
+    margin: 10px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    text-align: center;
+    border-bottom: 2px rgb(90, 90, 90) solid;
+    color: rgb(90, 90, 90);
+}
+
+.Modal__Option-Price{
+    margin: 10px;
+    font-size: 25px;
+    color: rgb(223, 88, 65);
 }
 
 .Modal__Options-Ready{
+    display: flex;
+    flex-flow: column;
+}
 
+.Modal__Order{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+
+.Modal__Order-Image{
+    margin: 50px;
+    object-fit: contain;
+    /* width: 40%; */
+    /* height: 80%; */
+    /* width: 220px; */
+    /* height: 220px; */
+    border: 10px rgb(255, 217, 0) solid;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.Modal__Order-Description{
+    width: 60%;
+    display: flex;
+    flex-flow: column;
+}
+
+.Modal__Order-Title{
+    margin: 0;
+    border-bottom: 2px rgb(90, 90, 90) solid;
+    color: rgb(90, 90, 90);
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+.Modal__Order-Details{
+    border-bottom: 2px rgb(90, 90, 90) solid;
+}
+
+.Modal__Order-Size,
+.Modal__Order-Bread,
+.Modal__Order-Vegie,
+.Modal__Order-Sauce,
+.Modal__Order-Filling{
+    color: rgb(90, 90, 90);
+    margin: 10px 0;
+}
+
+.Modal__Order-Name{
+    margin-top: auto;
+    margin-bottom: auto;
+    color: rgb(90, 90, 90);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.Modal__Manage-Order{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: white;
+}
+
+.Modal__Order-Quantity{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+
+.Modal__Decrease-Quantity,
+.Modal__Increase-Quantity{
+    margin: 5px;
+    padding: 0;
+    background-color: white;
+    color: lightgray;
+    border: 2px lightgray solid;
+    border-radius: 50%;
+    font-weight: bolder;
+    font-size: 25px;
+    width: 2vw;
+    height: 2vw;
+}
+.Modal__Decrease-Quantity:active,
+.Modal__Increase-Quantity:active{
+    background-color: rgb(235, 235, 235);
+    color: white;
+}
+
+.Modal__Order-Quantity{
+    margin: 5px 15px;
+    align-items: center;
+}
+
+.Modal__Order-Checkout{
+
+}
+
+.Modal__Options-Ready-Btn{
+    margin: 10px 20px;
+    background: rgb(255, 217, 0);
+    color: white;
+    border-radius: 5px;
+    border: 2px rgb(218, 185, 0) solid;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.Modal__Price-Section{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.Modal__Price{
+    color: rgb(223, 88, 65);
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0 20px 0;
 }
