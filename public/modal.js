@@ -73,26 +73,26 @@ document.getElementsByClassName("Modal__Close-Btn")[0].addEventListener('click',
 
 
 
-window.onload = (event) => {
-    const Sizes = document.getElementsByClassName("Modal__Options-Sizes")[0]
-    const Breads = document.getElementsByClassName("Modal__Options-Breads")[0]
-    const Vegies = document.getElementsByClassName("Modal__Options-Vegies")[0]
-    const Sauces = document.getElementsByClassName("Modal__Options-Sauces")[0]
-    const Fillings = document.getElementsByClassName("Modal__Options-Fillings")[0]
-    const Ready = document.getElementsByClassName("Modal__Options-Ready")[0]
+// window.onload = (event) => {
+//     const Sizes = document.getElementsByClassName("Modal__Options-Sizes")[0]
+//     const Breads = document.getElementsByClassName("Modal__Options-Breads")[0]
+//     const Vegies = document.getElementsByClassName("Modal__Options-Vegies")[0]
+//     const Sauces = document.getElementsByClassName("Modal__Options-Sauces")[0]
+//     const Fillings = document.getElementsByClassName("Modal__Options-Fillings")[0]
+//     const Ready = document.getElementsByClassName("Modal__Options-Ready")[0]
 
-    const Next_Btn = document.getElementsByClassName("Modal__Move-Right")[0]
-    const Previous_Btn = document.getElementsByClassName("Modal__Move-Left")[0]
+//     const Next_Btn = document.getElementsByClassName("Modal__Move-Right")[0]
+//     const Previous_Btn = document.getElementsByClassName("Modal__Move-Left")[0]
 
-    console.log(Next_Btn)
+//     console.log(Next_Btn)
 
-    Next_Btn.addEventListener("click", () => {
-        Sizes.style.display = "none"
-        console.log("Сработало")
-    })
+//     Next_Btn.addEventListener("click", () => {
+//         Sizes.style.display = "none"
+//         console.log("Сработало")
+//     })
 
-    console.log("Загружен модуль Modal");
-};
+//     console.log("Загружен модуль Modal");
+// };
 
 
 

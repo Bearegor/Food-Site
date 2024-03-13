@@ -88,7 +88,27 @@ body{
 }
 
 .Shopcart__List{
-    margin: 10px;
+    margin: 10px 0;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+.Shopcart__List-Element{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.Shopcart__List-Element p-l{
+    margin: 0 10px;
+    float: left;
+}
+
+.Shopcart__List-Element p-r{
+    margin: 0 10px;
+    float: right;
 }
 
 .Shopcart__Total-Count{
