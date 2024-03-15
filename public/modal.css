@@ -233,8 +233,9 @@
     align-items: center;
 }
 
-.Modal__Order-Checkout{
-
+.Modal__Order-Quantity-Number{
+    margin: 5px 15px;
+    align-items: center;
 }
 
 .Modal__Options-Ready-Btn{

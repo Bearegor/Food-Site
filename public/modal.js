@@ -1,3 +1,25 @@
+function AddOrder(Name, Price, Quantity){
+    const OrderElement = document.createElement("div")
+    OrderElement.classList.add("Shopcart__List-Element")
+
+    const NameElement = document.createElement("p-l")
+    NameElement.innerText = Name
+
+    const PriceElement = document.createElement("p")
+    PriceElement.innerText = Price
+    PriceElement.style.display = 'none'
+
+    const QuantityElement = document.createElement("p-r")
+    QuantityElement.innerText = Quantity
+
+    OrderElement.appendChild(NameElement)
+    OrderElement.appendChild(PriceElement)
+    OrderElement.appendChild(QuantityElement)
+
+    const ShopcartList = document.getElementsByClassName("Shopcart__List")[0]
+    ShopcartList.appendChild(OrderElement)
+}
+
 function openModal(){
     const Modal = document.getElementsByClassName("Modal")[0]
     const Sizes = document.getElementsByClassName("Modal__Options-Sizes")[0]
@@ -54,6 +76,21 @@ function moveInModal(direction){
             break;
     }
 }
+
+function CreateModalOrder(){
+    const Name = document.getElementsByClassName("Modal__Order-Name")[0].innerText
+    const Price = document.getElementsByClassName("Modal__Price")[0].innerText.split(' ')[1]
+    const Quantity = document.getElementsByClassName("Modal__Order-Quantity-Number")[0].innerText
+    console.log(Quantity)
+
+    AddOrder(Name, Price, Quantity)
+    closeModal()
+}
+
+const ModalToShopcartButtons = Array.from(document.getElementsByClassName("Modal__Options-Ready-Btn"))
+ModalToShopcartButtons.forEach((element, index) =>{
+    element.addEventListener('click', CreateModalOrder)
+})
 
 const ModalBtns = Array.from(document.getElementsByClassName("Food__Move-To-Modal"))
 ModalBtns.forEach((element, index) => {
