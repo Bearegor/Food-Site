@@ -1,27 +1,4 @@
-function AddOrder(Name, Price, Quantity){
-    const OrderElement = document.createElement("div")
-    OrderElement.classList.add("Shopcart__List-Element")
-
-    const NameElement = document.createElement("p-l")
-    NameElement.innerText = Name
-
-    const PriceElement = document.createElement("p")
-    PriceElement.innerText = Price
-    PriceElement.style.display = 'none'
-
-    const QuantityElement = document.createElement("p-r")
-    QuantityElement.innerText = Quantity
-
-    OrderElement.appendChild(NameElement)
-    OrderElement.appendChild(PriceElement)
-    OrderElement.appendChild(QuantityElement)
-
-    const ShopcartList = document.getElementsByClassName("Shopcart__List")[0]
-    ShopcartList.appendChild(OrderElement)
-}
-
-function openModal(){
-    const Modal = document.getElementsByClassName("Modal")[0]
+function defaultModalState(){
     const Sizes = document.getElementsByClassName("Modal__Options-Sizes")[0]
     const Breads = document.getElementsByClassName("Modal__Options-Breads")[0]
     const Vegies = document.getElementsByClassName("Modal__Options-Vegies")[0]
@@ -29,7 +6,6 @@ function openModal(){
     const Fillings = document.getElementsByClassName("Modal__Options-Fillings")[0]
     const Ready = document.getElementsByClassName("Modal__Options-Ready")[0]
 
-    Modal.style.display = "block"
     Sizes.style.display = "flex"
     Breads.style.display = "none"
     Vegies.style.display = "none"
@@ -37,6 +13,28 @@ function openModal(){
     Breads.style.display = "none"
     Fillings.style.display = "none"
     Ready.style.display = "none"
+}
+
+function openModal(){
+    const Modal = document.getElementsByClassName("Modal")[0]
+    Modal.style.display = "block"
+
+    defaultModalState()
+
+    const Parent = this.parentNode;
+    const Parts = Array.from(Parent.children)
+
+    const Name = Parts[1].innerText
+    const Image = Parts[0].src
+    const Price = Parts[3].innerText.split(' ')[1]
+
+    const Modal_Name = document.getElementsByClassName("Modal__Order-Name")[0]
+    const Modal_Image = document.getElementsByClassName("Modal__Order-Image")[0]
+    const Modal_Price = document.getElementsByClassName("Modal__Price")[0]
+
+    Modal_Name.innerText = Name
+    Modal_Image.src = Image
+    Modal_Price.innerText = `Итого: ${Price} руб.`
 }
 
 function closeModal(){
@@ -77,21 +75,6 @@ function moveInModal(direction){
     }
 }
 
-function CreateModalOrder(){
-    const Name = document.getElementsByClassName("Modal__Order-Name")[0].innerText
-    const Price = document.getElementsByClassName("Modal__Price")[0].innerText.split(' ')[1]
-    const Quantity = document.getElementsByClassName("Modal__Order-Quantity-Number")[0].innerText
-    console.log(Quantity)
-
-    AddOrder(Name, Price, Quantity)
-    closeModal()
-}
-
-const ModalToShopcartButtons = Array.from(document.getElementsByClassName("Modal__Options-Ready-Btn"))
-ModalToShopcartButtons.forEach((element, index) =>{
-    element.addEventListener('click', CreateModalOrder)
-})
-
 const ModalBtns = Array.from(document.getElementsByClassName("Food__Move-To-Modal"))
 ModalBtns.forEach((element, index) => {
     element.addEventListener('click', openModal)
@@ -106,30 +89,3 @@ document.getElementsByClassName("Modal__Move-Left")[0].addEventListener('click',
 })
 
 document.getElementsByClassName("Modal__Close-Btn")[0].addEventListener('click', closeModal)
-
-
-
-
-// window.onload = (event) => {
-//     const Sizes = document.getElementsByClassName("Modal__Options-Sizes")[0]
-//     const Breads = document.getElementsByClassName("Modal__Options-Breads")[0]
-//     const Vegies = document.getElementsByClassName("Modal__Options-Vegies")[0]
-//     const Sauces = document.getElementsByClassName("Modal__Options-Sauces")[0]
-//     const Fillings = document.getElementsByClassName("Modal__Options-Fillings")[0]
-//     const Ready = document.getElementsByClassName("Modal__Options-Ready")[0]
-
-//     const Next_Btn = document.getElementsByClassName("Modal__Move-Right")[0]
-//     const Previous_Btn = document.getElementsByClassName("Modal__Move-Left")[0]
-
-//     console.log(Next_Btn)
-
-//     Next_Btn.addEventListener("click", () => {
-//         Sizes.style.display = "none"
-//         console.log("Сработало")
-//     })
-
-//     console.log("Загружен модуль Modal");
-// };
-
-
-

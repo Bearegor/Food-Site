@@ -248,6 +248,10 @@
     font-weight: bold;
 }
 
+.Modal__Options-Ready-Btn:active{
+    background-color: rgb(238, 202, 0);
+}
+
 .Modal__Price-Section{
     display: flex;
     justify-content: center;
