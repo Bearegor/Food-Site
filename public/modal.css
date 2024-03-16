@@ -9,6 +9,7 @@
     overflow: auto;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
+    overflow: scroll;
 }
 
 .Modal__Content{
@@ -57,11 +58,20 @@
 }
 
 .Modal__Page-Name{
-    margin: 15px;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin: 15px; */
+    margin: 0;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    padding: 15px 25px;
+    /* padding-left: auto;
+    padding-right: auto; */
     font-weight: bold;
     color: rgb(97, 97, 97);
+}
+
+.Modal__Page-Name:hover{
+    background-color: rgb(255, 130, 108);
+    color: white;
 }
 
 .Modal__Menu{
