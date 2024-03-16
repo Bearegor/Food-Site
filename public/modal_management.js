@@ -13,14 +13,32 @@ function defaultModalState(){
     Breads.style.display = "none"
     Fillings.style.display = "none"
     Ready.style.display = "none"
+
+    const Options = Array.from(document.getElementsByClassName("Modal__Option"))
+    Options.forEach((element) =>{
+        element.removeAttribute("style")
+        element.removeAttribute("id")
+    })
+
+    document.getElementsByClassName("Modal__Order-Size")[0].innerText = "Размер: Не выбрано"
+    document.getElementsByClassName("Modal__Order-Bread")[0].innerText = "Хлеб: Не выбрано"
+    document.getElementsByClassName("Modal__Order-Vegie")[0].innerText = "Овощи: Не выбрано"
+    document.getElementsByClassName("Modal__Order-Sauce")[0].innerText = "Соус: Не выбрано"
+    document.getElementsByClassName("Modal__Order-Filling")[0].innerText = "Начинка: Не выбрано"
+    document.getElementsByClassName("Modal__Order-Quantity-Number")[0].innerText = '1'
 }
 
 function openModal(){
     const Modal = document.getElementsByClassName("Modal")[0]
     Modal.style.display = "block"
-    const Option = document.getElementsByClassName("Modal__Page-Name")[0]
-    Option.style.background = 'rgb(252, 104, 78)'
-    Option.style.color = 'white'
+    const Options = Array.from(document.getElementsByClassName("Modal__Page-Name"))
+    Options.forEach((element, index) =>{
+        element.removeAttribute("style")
+        if(index === 0){
+            element.style.background = 'rgb(252, 104, 78)'
+            element.style.color = 'white'
+        }
+    })
 
     defaultModalState()
 
@@ -43,6 +61,7 @@ function openModal(){
 function closeModal(){
     const Modal = document.getElementsByClassName("Modal")[0]
     Modal.style.display = "none"
+
 }
 
 function moveInModal(direction){
@@ -63,8 +82,9 @@ function moveInModal(direction){
 
     const Names = Array.from(document.getElementsByClassName("Modal__Page-Name"))
     Names.forEach((element) =>{
-        element.style.background = 'white'
-        element.style.color = 'rgb(97, 97, 97)'
+        element.removeAttribute("style")
+        // element.style.background = 'white'
+        // element.style.color = 'rgb(97, 97, 97)'
     })
 
     switch(direction){
@@ -106,8 +126,9 @@ function hideOthers(chosen){
     const Names = document.getElementsByClassName("Modal__Page-Name")
 
     Options.forEach((element, index) => {
-        Names[index].style.background = 'white'
-        Names[index].style.color = 'rgb(97, 97, 97)'
+        Names[index].removeAttribute("style")
+        // Names[index].style.background = 'white'
+        // Names[index].style.color = 'rgb(97, 97, 97)'
         element.style.display = 'none'
     })
 
