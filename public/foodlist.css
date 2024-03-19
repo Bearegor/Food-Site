@@ -1,4 +1,20 @@
 .FoodList{
+    /* width: 85vw;
+    padding: 3px;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap; */
+    display: flex;
+    flex-flow: column;
+}
+
+.FoodList__Sandwiches,
+.FoodList__Burgers,
+.FoodList__Salads,
+.FoodList__Chicken,
+.FoodList__Drinks,
+.FoodList__Pizza,
+.FoodList__Shaurma {
     width: 85vw;
     padding: 3px;
     justify-content: space-between;

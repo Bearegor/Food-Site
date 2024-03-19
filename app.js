@@ -35,29 +35,33 @@ function GetData(){
     Options.Fillings.push(value)
   }
 
-  // const Categories = new Set()
-  // Menu.forEach((element) => {
-  //   Categories.add(element.category)
+  const SetCategories = new Set()
+  Menu.forEach((element) => {
+    SetCategories.add(element.category)
+  })
+  const Categories = Array.from(SetCategories)
+  // Categories.forEach((element, index, arr) =>{
+  //   arr[index] = element.charAt(0).toUpperCase() + element.slice(1)
   // })
-  // console.log(Categories)
+  console.log(Categories)
 
-  return [Menu, Options]
+  return [Menu, Categories, Options]
 }
 
 
-const [Menu, Options] = GetData()
+const [Menu, Categories, Options] = GetData()
 
 // console.log(Menu)
 
 app.get('/', (req, res) => {
     res.render('MainPage',
-    {Menu: Menu, Category: 'any', Options: Options})
+    {Menu: Menu, Categories: Categories, Options: Options})
 })
 
-app.get('/:category', (req, res) => {
-  res.render('MainPage',
-  {Menu: Menu, Category: req.params.category, Options: Options})
-})
+// app.get('/:category', (req, res) => {
+//   res.render('MainPage',
+//   {Menu: Menu, Category: req.params.category, Options: Options})
+// })
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

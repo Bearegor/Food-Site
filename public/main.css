@@ -34,14 +34,10 @@ body{
 .Selection__Selector{
     font-size: x-large;
     margin: 10px;
-}
-
-.Selection__Selector a{
-    text-decoration: none;
     color: black;
 }
 
-.Selection__Selector a:hover{
+.Selection__Selector:hover{
     color: red;
 }
 
